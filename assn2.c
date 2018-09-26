@@ -22,14 +22,14 @@ int main(){
 		close(fp[FD_WRITE]);
 		dup2(fp[FD_READ], 0);
 		close(fp[FD_READ]);
-		execlp("sort", "sort", "-n", NULL);
+		execlp("bc", "bc", NULL);
 		perror("Cannot exec");
 		return -1;	
 	}
 	else{
 		close(fp[FD_READ]);
 		printf("Parent\n");
-		write(fp[FD_WRITE], "24 56", 5);
+		write(fp[FD_WRITE], "23+23\n",6);
 		close(fp[FD_WRITE]);
 		int ret;
 		wait(&ret);
