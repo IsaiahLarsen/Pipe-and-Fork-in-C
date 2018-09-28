@@ -57,7 +57,7 @@ int main(int argc, char *argv[]){
 			}else{
 				while(fscanf(fptr, "%d%d%d",&nums[0],&nums[1],&nums[2]) == 3){
 					printf("The result of (%d * %d) / %d is ", nums[0],nums[1],nums[2]);
-					dprintf(fp[FD_WRITE], "(%d*%d)/%d\n",nums[0],nums[1],nums[2]);
+					dprintf(fp[FD_WRITE], "scale=4; (%d*%d)/%d\n",nums[0],nums[1],nums[2]);
 					printf("\n");
 				}
 			}
@@ -66,7 +66,7 @@ int main(int argc, char *argv[]){
 			//read three integers at a time
 			while(scanf("%d%d%d", &nums[0],&nums[1],&nums[2]) == 3){
 				printf("The result of (%d * %d) / %d is ", nums[0],nums[1],nums[2]);
-				dprintf(fp[FD_WRITE], "(%d*%d)/%d\n",nums[0],nums[1], nums[2]);
+				dprintf(fp[FD_WRITE], "scale=4; (%d*%d)/%d\n",nums[0],nums[1], nums[2]);
 
 			}
 		}
